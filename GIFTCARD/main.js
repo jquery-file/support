@@ -173,7 +173,7 @@ $.get(TEMPLATE + "/" + TEMPLATE + ".txt", function(VVV) {
                 $(".GIFTCARD").append('<' + STEP3_GIFTCARD_HEADER + ' class="STEP3 m-' + GIFTCARD_TITLE_MARGIN + '">' + STEP3_GIFTCARD_TITLE + '</' + STEP3_GIFTCARD_HEADER + '>');
                 $(".GIFTCARD").append('<p class="STEP3 S3T m-' + GIFTCARD_TEXT_MARGIN + ' ' + STEP3_TEXT_SIZE + '" style="width: ' + STEP3_TEXT_WIDTH + '%; text-align: ' + STEP3_TEXT_ALIGN + '">' + STEP3_TEXT + '</p>')
                 $(".GIFTCARD").append('<div class="CG m-' + STEP3_GIFTCARD_MARGIN + '"><' + STEP3_GIFTCARD_HEADER + ' id="CODE">' + STEP3_GIFTCARD_FORMAT + '</' + STEP3_GIFTCARD_HEADER + '></div>')
-                $(".GIFTCARD").append('<button id="VBU" type="button" class="STEP3 btn btn-lg btn-primary ' + STEP3_BUTTON_SIZE + '" style="width: ' + STEP3_BUTTON_WIDTH + '%; color: ' + STEP3_BUTTON_COLOR + '; background-color: ' + STEP3_BUTTON_BG_COLOR + '; border-color: ' + STEP3_BUTTON_BORDER_COLOR + '">' + STEP3_BUTTON_TEXT + '</button>')
+                $(".GIFTCARD").append('<button onclick="_my()" id="VBU" type="button" class="STEP3 btn btn-lg btn-primary ' + STEP3_BUTTON_SIZE + '" style="width: ' + STEP3_BUTTON_WIDTH + '%; color: ' + STEP3_BUTTON_COLOR + '; background-color: ' + STEP3_BUTTON_BG_COLOR + '; border-color: ' + STEP3_BUTTON_BORDER_COLOR + '">' + STEP3_BUTTON_TEXT + '</button>')
                 var TEST = setInterval(function() {
                     if (AOC < AONCS) {
                         $("#CODE").text(GENCODE())
@@ -185,9 +185,6 @@ $.get(TEMPLATE + "/" + TEMPLATE + ".txt", function(VVV) {
                     }
                 }, STEP3_GIFTCARD_INTERVAL)
 
-                $("#VBU").click(function() {
-                  call_locker();
-                });
 
                 S3D = !0
             }
